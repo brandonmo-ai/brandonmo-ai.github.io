@@ -694,7 +694,7 @@ summary {
 .transformation-media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center top;
 }
 
@@ -703,7 +703,7 @@ summary {
   flex: 1;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 72px;
+  min-height: 120px;
   padding: 1.25rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(246, 248, 249, 0.95));

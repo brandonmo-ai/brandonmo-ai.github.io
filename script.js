@@ -15,11 +15,13 @@ mediaFrames.forEach((frame) => {
 
   const markReady = () => {
     if (image.naturalWidth > 0) {
+      frame.classList.remove("is-empty");
       frame.classList.add("is-ready");
     }
   };
 
   const markFallback = () => {
+    frame.classList.add("is-empty");
     frame.classList.remove("is-ready");
   };
 

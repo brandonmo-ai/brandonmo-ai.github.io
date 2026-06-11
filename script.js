@@ -61,3 +61,21 @@ if ("IntersectionObserver" in window) {
 } else {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
+
+// Sticky mobile CTA — reveal once the hero has scrolled mostly out of view
+const stickyCta = document.querySelector("[data-sticky-cta]");
+
+if (stickyCta) {
+  const hero = document.querySelector(".hero");
+
+  const toggleSticky = () => {
+    const threshold = hero ? hero.offsetHeight * 0.6 : 520;
+    const show = window.scrollY > threshold;
+    stickyCta.classList.toggle("is-visible", show);
+    stickyCta.setAttribute("aria-hidden", show ? "false" : "true");
+  };
+
+  toggleSticky();
+  window.addEventListener("scroll", toggleSticky, { passive: true });
+  window.addEventListener("resize", toggleSticky, { passive: true });
+}

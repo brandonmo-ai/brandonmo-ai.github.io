@@ -368,6 +368,116 @@ summary {
   transform: translateX(0.25rem);
 }
 
+/* ---- Offers / ways to start ---- */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem 1.4rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 246, 247, 0.95));
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(224, 83, 31, 0.7), transparent);
+}
+
+.offer-card--featured {
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 16px 36px rgba(224, 83, 31, 0.16);
+}
+
+.offer-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 1.3rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.offer-card__badge--alt {
+  background: var(--primary-color);
+}
+
+.offer-card__price {
+  margin: 0.3rem 0 0.4rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent-color);
+}
+
+.offer-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.offer-card p {
+  margin: 0 0 1.3rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.offer-card .button {
+  margin-top: auto;
+  width: 100%;
+  max-width: none;
+  padding: 0.85rem 1rem;
+  font-size: 15px;
+}
+
+.button--soft {
+  background: rgba(24, 50, 79, 0.07);
+  color: var(--primary-color);
+  border-color: rgba(24, 50, 79, 0.18);
+}
+
+.button--soft:hover,
+.button--soft:focus-visible {
+  background: rgba(24, 50, 79, 0.13);
+}
+
+.offers-note {
+  max-width: 52rem;
+  margin: 1.4rem auto 0;
+  text-align: center;
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .trust-list,
 .about-points,
 .fit-card ul,

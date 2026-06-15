@@ -376,6 +376,16 @@ summary {
   align-items: stretch;
 }
 
+.offer-solo {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-solo .offer-card {
+  width: 100%;
+  max-width: 460px;
+}
+
 .offer-card {
   position: relative;
   display: flex;
@@ -418,9 +428,9 @@ summary {
   background: var(--primary-color);
 }
 
-.offer-card__price {
-  margin: 0.3rem 0 0.4rem;
-  font-size: 2.1rem;
+.offer-card .offer-card__price {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   line-height: 1;
   color: var(--accent-color);
